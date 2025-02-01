@@ -30,11 +30,11 @@ class Configurations {
   }
 
   public user = {
-    getList: '/user',
-    get: '/user/{id}',
-    create: '/user/{id}',
-    update: '/user/{id}',
-    delete: '/user/{id}',
+    getList: '/users',
+    get: '/users/{id}',
+    create: '/users',
+    update: '/users/{id}',
+    delete: '/users/{id}',
   }
 
   constructor() {

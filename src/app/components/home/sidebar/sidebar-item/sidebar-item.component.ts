@@ -39,7 +39,6 @@ export class SidebarItemComponent implements OnInit, OnDestroy {
   key: string = ''
 
   ngOnInit(): void {
-    console.log('ss', this.item)
     this.menuSourceSubscription = this.menuService.menuSource$.subscribe((value: MenuChangeEvent): void => {
       Promise.resolve(null).then((): void => {
         if (value.routeEvent) {
