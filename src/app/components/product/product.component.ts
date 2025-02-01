@@ -135,6 +135,7 @@ export class ProductComponent extends NotifyAbstract implements OnInit {
     this.productId = 0
     this.categoryOne = 0
     this.categoryTwo = 0
+    this.modalCategory = false
   }
 
   createCategories() {

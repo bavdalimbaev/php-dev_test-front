@@ -32,7 +32,7 @@ export class CategoryService {
   }
 
   public product(id: number, data: ICategoryProduct): Observable<ICategory> {
-    return this.api.postJSON<any>(Config.getUrl(Config.category.update, {id}), data)
+    return this.api.postJSON<any>(Config.getUrl(Config.category.product, {id}), data)
       .pipe(map((response: any) => response.data))
   }
 

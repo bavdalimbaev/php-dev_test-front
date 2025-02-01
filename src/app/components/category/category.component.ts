@@ -123,7 +123,7 @@ export class CategoryComponent extends NotifyAbstract implements OnInit {
 
   createProducts() {
     const data: ICategoryProduct = {
-      product_ids: [this.productOne, this.productTwo],
+      product_ids: [Number(this.productOne), Number(this.productTwo)],
     }
     this.categoryService.product(this.categoryId, data)
       .subscribe({
