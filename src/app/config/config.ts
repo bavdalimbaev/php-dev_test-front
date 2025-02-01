@@ -5,10 +5,12 @@ import {environment} from '../../environments/environment'
  */
 class Configurations {
   public static exceptions: string[] = [
+    'pusher',
     'backend',
     'frontend',
   ]
 
+  public pusher = environment.pusher
   public frontend: string = environment.frontend
 
   public backend: string = environment.backend
@@ -16,16 +18,18 @@ class Configurations {
   public category = {
     getList: '/categories',
     get: '/categories/{id}',
-    create: '/categories/{id}',
+    create: '/categories',
     update: '/categories/{id}',
+    product: '/categories/{id}/products',
     delete: '/categories/{id}',
   }
 
   public product = {
     getList: '/products',
     get: '/products/{id}',
-    create: '/products/{id}',
+    create: '/products',
     update: '/products/{id}',
+    category: '/products/{id}/categories',
     delete: '/products/{id}',
   }
 

@@ -112,8 +112,8 @@ export class UserComponent extends NotifyAbstract implements OnInit {
     }
     this.userService.update(this.modalUpdate, data)
       .subscribe({
-        next: (user: IUserInfo): void => {
-          this.users.unshift(user)
+        next: (_user: IUserInfo): void => {
+          this.getList()
           this.instant('success', 'success update')
           this.clearForm()
         }
