@@ -1,0 +1,38 @@
+<div class="layout-topbar">
+  <a class="layout-topbar-logo" [routerLink]="'/'">
+    <p>{{ layoutService.title }}</p>
+  </a>
+
+  <button #menubutton class="p-link layout-menu-button layout-topbar-button"
+          (click)="layoutService.onMenuToggle()"
+  >
+    <i class="pi pi-bars"></i>
+  </button>
+
+  <button #topbarmenubutton class="p-link layout-topbar-menu-button layout-topbar-button"
+          (click)="layoutService.showProfileSidebar()"
+  >
+    <i class="pi pi-ellipsis-v"></i>
+  </button>
+
+  <div #topbarmenu class="layout-topbar-menu"
+       [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}"
+  >
+    <div class="flex-column align-items-center"
+         [class.flex]="!layoutService.state.profileSidebarVisible"
+         [class.hidden]="layoutService.state.profileSidebarVisible"
+    >
+      <p class="mb-0">Hello User</p>
+    </div>
+    <button class="p-link layout-topbar-button">
+      <i class="pi pi-user"></i>
+      <span>Hello User</span>
+    </button>
+    <button class="p-link layout-topbar-button"
+            [routerLink]="'/home'"
+    >
+      <i class="pi pi-sign-out"></i>
+      <span>Выйти</span>
+    </button>
+  </div>
+</div>
